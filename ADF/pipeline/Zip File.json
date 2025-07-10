@@ -1,9 +1,9 @@
 {
-	"name": "Empty",
+	"name": "Zip File",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "API extraction - Zip",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -22,7 +22,10 @@
 							"requestMethod": "GET"
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "BinaryReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings"
+							}
 						}
 					},
 					"sink": {
