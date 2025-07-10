@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://github.com/sminamioka/Data_Engeneering/blob/5b71383e76b9d2add1c1b2e2cb996d01ea8682eb/Src/F1/F1_Driver.zip",
+			"url": "https://github.com/sminamioka/Data_Engeneering/raw/5b71383e76b9d2add1c1b2e2cb996d01ea8682eb/Src/F1/F1_Driver.zip",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
