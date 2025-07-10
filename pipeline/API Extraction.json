@@ -1,9 +1,9 @@
 {
-	"name": "pipeline1",
+	"name": "API Extraction",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Extract API",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
