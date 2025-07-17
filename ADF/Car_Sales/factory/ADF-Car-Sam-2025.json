@@ -1,0 +1,9 @@
+{
+	"name": "ADF-Car-Sam-2025",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f62adc6a-437d-45f1-bf29-6472d329b83b",
+		"tenantId": "45157894-825a-4cf0-91b9-54e6da6895af"
+	}
+}
