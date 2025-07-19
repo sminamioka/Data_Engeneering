@@ -209,7 +209,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "Select * as Min_Date From Water_table",
+						"sqlReaderQuery": "Select Last_load From Water_table",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
