@@ -31,16 +31,20 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "Select * from source_cars_sale where Date_ID >@{activity('Last Load').output} and Date_ID <= @{activity('Current Load').output}",
+							"value": "Select * from source_cars_data where Date_ID > '@{activity('Last Load').output}' and Date_ID <= '@{activity('Current Load').output}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -189,12 +193,15 @@
 				"inputs": [
 					{
 						"referenceName": "AzureSQL",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Table_Name": "source_cars_data"
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSQL",
+						"referenceName": "ds_datalake",
 						"type": "DatasetReference"
 					}
 				]
