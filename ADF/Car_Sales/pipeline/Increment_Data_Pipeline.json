@@ -5,7 +5,20 @@
 			{
 				"name": "Extract from Github",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Last Load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Current Load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -16,14 +29,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "Select * from source_cars_sale where Date_ID >@{activity('Last Load').output} and Date_ID <= @{activity('Current Load').output}",
+							"type": "Expression"
 						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
 					},
 					"sink": {
 						"type": "AzureSqlSink",
@@ -176,11 +188,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference",
-						"parameters": {
-							"load_flag": "SalesData.csv"
-						}
+						"referenceName": "AzureSQL",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
