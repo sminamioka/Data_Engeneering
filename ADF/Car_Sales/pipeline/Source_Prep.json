@@ -52,7 +52,10 @@
 				"outputs": [
 					{
 						"referenceName": "AzureSQL",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Table_Name": "source_cars_data"
+						}
 					}
 				]
 			}
