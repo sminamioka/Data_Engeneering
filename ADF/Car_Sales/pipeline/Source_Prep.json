@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Extract From Github",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
