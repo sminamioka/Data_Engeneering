@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://samcar2025.dfs.core.windows.net/",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDBFRjM2MjNELTA3NkItNEM1OS1BNzk2LUU4NUNEMDEyOUQwRl9hZTc2MGE0YS04OWZkLTRhNTgtYmQ4NS0yN2JkYzM5N2Y0MWUiDQp9"
+			"url": "https://adlscarproject.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDFEMEJCMDcwLTFERDYtNDI4Qy05NkYzLTkxNTIzRjc0RUI4M182MTM1NGMyZC1hYTE3LTQ5YjYtOTM3MS0wOGFiYWEwZjA2OTIiDQp9"
 		}
 	}
 }
