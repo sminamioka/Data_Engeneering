@@ -27,7 +27,8 @@
 						"parameters": {
 							"Table_Name": "Water_table"
 						}
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
@@ -88,7 +89,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "Select * from source_cars_data where Date_ID > '@{activity('Last Load').output}' and Date_ID <= '@{activity('Current Load').output}'",
+							"value": "Select * from source_cars_data where Date_ID > '@{activity('Last Load').output.value[0].Last_load}' and Date_ID <= '@{activity('Current Load').output.value[0].Max_Date}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
