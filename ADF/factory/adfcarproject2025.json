@@ -1,9 +1,0 @@
-{
-	"name": "adfcarproject2025",
-	"location": "uksouth",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "e9e1b162-c76b-467f-97b0-facf2c3ee966",
-		"tenantId": "45157894-825a-4cf0-91b9-54e6da6895af"
-	}
-}
